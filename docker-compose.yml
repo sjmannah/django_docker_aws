@@ -2,9 +2,9 @@ version: "3.8"
 services:
   web:
     build: ./app
-    image:
+    image: 483713701456.dkr.ecr.us-east-1.amazonaws.com/django_docker_aws:django_docker_aws_web
     command: gunicorn hello_django.wsgi:application --bind 0.0.0.0:8000
-    volumes: 483713701456.dkr.ecr.us-east-1.amazonaws.com/django_docker_aws:django_docker_aws_web
+    volumes: 
       - ./app/:/usr/src/app/
       - static_volume:/usr/src/app/static
     expose:
